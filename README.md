@@ -8,7 +8,12 @@ This will be a collection of Docker files and docker-compose files that I use/pl
 
 ## List of WIP
 
-*none*
+- Adminer+mySQL
+  - branch-> phpmyadmin+mysql (I know...)
+  - first test successful, ran and stood up
+  - only using latest version tags for now
+  - volume persitence working
+  - test tables/db created
 
 ## List of potential work
 
