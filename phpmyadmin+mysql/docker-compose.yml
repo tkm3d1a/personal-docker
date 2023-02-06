@@ -5,7 +5,7 @@ services:
   db:
     image: mysql
     container_name: mySQL-1
-    #command: --init-file /data/application/init.sql
+    command: --init-file /data/application/init.sql
     volumes:
       - mysqldata:/var/lib/mysql
       - ./init.sql:/data/application/init.sql
