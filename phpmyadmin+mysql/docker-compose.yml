@@ -5,18 +5,22 @@ services:
   db:
     image: mysql
     container_name: mySQL-1
-    # command: insert input command for autoloading script/db creation
+    #command: --init-file /data/application/init.sql
     volumes:
       - mysqldata:/var/lib/mysql
+      - ./init.sql:/data/application/init.sql
     restart: always
+    ports:
+      - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: secretpassword
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root
 
   adminer:
     image: adminer
     restart: always
     ports:
-      - 8080:8080
+      - 8082:8080
 
 volumes:
   mysqldata:
